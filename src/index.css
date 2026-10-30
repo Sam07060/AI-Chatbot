@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm: #FAF9F5;
+    --card-surface: #FFFFFF;
+    --paper-tint: #F5F3EC;
+    --ink-black: #1A1D20;
+    --ink-body: #4A525A;
+    --ink-muted: #7A8490;
+    --border-soft: #E8E5DD;
+    --border-warm: #DDD9CF;
+    --accent-heritage: #963D26; /* Warm Terra-Cotta / Antique Amber */
+    --accent-forest: #234E3E; /* Academic Forest Green */
+  }
+
+  body {
+    background-color: var(--bg-warm);
+    color: var(--ink-black);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom editorial styles */
+.font-serif-heading {
+  font-family: "Georgia", "Cambria", "Times New Roman", serif;
+}
+
+.paper-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 1px 3px rgba(35, 30, 20, 0.04), 0 6px 16px -4px rgba(35, 30, 20, 0.05);
+}
+
+.paper-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.paper-card-hover:hover {
+  border-color: var(--border-warm);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(35, 30, 20, 0.08), 0 12px 28px -6px rgba(35, 30, 20, 0.06);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F2EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5D1C5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B3A4;
+}
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
