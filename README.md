@@ -1,4 +1,4 @@
-# CodeAI — Adaptive C++ Learning Space & AI Technical Interview Studio
+# CodeSensei — Adaptive C++ Learning Space & AI Technical Interview Studio
 ### Course: Object Oriented Programming with C++
 ### Unit 5: Exception Handling and Templates
 
